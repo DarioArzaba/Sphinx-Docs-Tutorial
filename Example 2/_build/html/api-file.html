@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>An Api Example &#8212; Proyect Example 2 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example 2" href="modules.html" />
+    <link rel="prev" title="Chapter Title" href="intro.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="an-api-example">
+<h1>An Api Example<a class="headerlink" href="#an-api-example" title="Permalink to this headline">¶</a></h1>
+<p>The default domain is py. To change it we modify <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">default-domain::</span></code>.</p>
+<p>For directives and roles of the current domain it is not necessary to write it.
+Meaning that <code class="docutils literal notranslate"><span class="pre">:py:</span></code> is not necessary as a prefix.</p>
+<div class="section" id="mytestpackage-mytestmodule">
+<h2><a class="reference internal" href="#module-MyTestPackage.MyTestModule" title="MyTestPackage.MyTestModule: This module is a test module for the API page. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MyTestPackage.MyTestModule</span></code></a><a class="headerlink" href="#mytestpackage-mytestmodule" title="Permalink to this headline">¶</a></h2>
+<p>Another module option is <code class="docutils literal notranslate"><span class="pre">deprecated</span></code> to indicate that it is no longer recomended.</p>
+<span class="target" id="module-MyTestPackage.MyTestModule"></span><dl class="data">
+<dt id="MyTestPackage.MyTestModule.newString">
+<code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">newString</code><a class="headerlink" href="#MyTestPackage.MyTestModule.newString" title="Permalink to this definition">¶</a></dt>
+<dt id="MyTestPackage.MyTestModule.newString2">
+<code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">newString2</code><a class="headerlink" href="#MyTestPackage.MyTestModule.newString2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description of the <a class="reference internal" href="#MyTestPackage.MyTestModule.newString" title="MyTestPackage.MyTestModule.newString"><code class="xref py py-data docutils literal notranslate"><span class="pre">newString</span></code></a> data and of the other data grouped and how it is used.You cannot use content in modules like <a class="reference internal" href="#module-MyTestPackage.MyTestModule" title="MyTestPackage.MyTestModule: This module is a test module for the API page. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">MyTestPackage.MyTestModule</span></code></a>. To reference an existing module without creating new index entries you can use <code class="docutils literal notranslate"><span class="pre">currentmodule</span></code>.</p>
+<dl class="function">
+<dt id="MyTestPackage.MyTestModule.myTestFunction">
+<code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">myTestFunction</code><span class="sig-paren">(</span><em class="sig-param">randomString</em><span class="optional">[</span>, <em class="sig-param">number=1</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestFunction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="exception">
+<dt id="MyTestPackage.MyTestModule.OverflowError">
+<em class="property">exception </em><code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">OverflowError</code><a class="headerlink" href="#MyTestPackage.MyTestModule.OverflowError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>We can reference an exception like this <a class="reference internal" href="#MyTestPackage.MyTestModule.OverflowError" title="MyTestPackage.MyTestModule.OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a>.</p>
+<p>Some description of <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestFunction" title="MyTestPackage.MyTestModule.myTestFunction"><code class="xref py py-func docutils literal notranslate"><span class="pre">myTestFunction()</span></code></a>, like describing its arguments.
+Functions are module level and generally just contain a field list.
+You can use the <code class="docutils literal notranslate"><span class="pre">:async:</span></code> to indicate an async function.</p>
+<p>A field list can use param, parameter, arg, argument, key, keyword,
+type, raises, raise, except, exception, var, ivar, cvar, vartype, returns, return and rtype.</p>
+<p>You can link a type with list(int), dict(str, int), tuple(float, float), int, float, str, None, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>randomString</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Some random string that myTestFunction needs.</p></li>
+<li><p><strong>number</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><em>None</em></a>) – Some number that myTestFunction needs. Can be from 1 to 10.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#MyTestPackage.MyTestModule.OverflowError" title="MyTestPackage.MyTestModule.OverflowError"><strong>OverflowError</strong></a> – If it gets a big number.</p>
+</dd>
+<dt class="field-odd">Var</dt>
+<dd class="field-odd"><p>someClassVariable</p>
+</dd>
+<dt class="field-even">Vartype</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a> (, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a>)</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The new and better newString.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="MyTestPackage.MyTestModule.compile">
+<code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">compile</code><span class="sig-paren">(</span><em class="sig-param">source : string</em>, <em class="sig-param">filename</em>, <em class="sig-param">symbol='file'</em><span class="sig-paren">)</span> &#x2192; ast object<a class="headerlink" href="#MyTestPackage.MyTestModule.compile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is using Python 3 Style argument annotations.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="MyTestPackage.MyTestModule.myTestClass">
+<em class="property">class </em><code class="sig-prename descclassname">MyTestPackage.MyTestModule.</code><code class="sig-name descname">myTestClass</code><span class="sig-paren">(</span><em class="sig-param">constructorArg</em><span class="sig-paren">)</span><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>constructorArg</strong> – Some information needed for every instance.</p>
+</dd>
+</dl>
+<p>Description of the <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass" title="MyTestPackage.MyTestModule.myTestClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">myTestClass</span></code></a> with attributes and methods.</p>
+<dl class="attribute">
+<dt id="MyTestPackage.MyTestModule.myTestClass.instanceData">
+<code class="sig-name descname">instanceData</code><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.instanceData" title="Permalink to this definition">¶</a></dt>
+<dd><p>This <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.instanceData" title="MyTestPackage.MyTestModule.myTestClass.instanceData"><code class="xref py py-attr docutils literal notranslate"><span class="pre">instanceData</span></code></a> is expected to be a string that represents the name of the object. It can be changed directly.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="MyTestPackage.MyTestModule.myTestClass.CONSTANTDATA">
+<code class="sig-name descname">CONSTANTDATA</code><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.CONSTANTDATA" title="Permalink to this definition">¶</a></dt>
+<dd><p>A variable that is not intended to be changed can be referenced like <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.CONSTANTDATA" title="MyTestPackage.MyTestModule.myTestClass.CONSTANTDATA"><code class="xref py py-const docutils literal notranslate"><span class="pre">CONSTANTDATA</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MyTestPackage.MyTestModule.myTestClass.testMethod">
+<code class="sig-name descname">testMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.testMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of this <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.testMethod" title="MyTestPackage.MyTestModule.myTestClass.testMethod"><code class="xref py py-meth docutils literal notranslate"><span class="pre">testMethod()</span></code></a>. Method Options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">:async:</span></code> to indicate an async method.</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">:classmethod:</span></code> to indicate a class method.</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">:property:</span></code> to indicate this is a property method.</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">:staticmethod:</span></code> to indicate it is a static method.</p></li>
+<li><p>You can use <code class="docutils literal notranslate"><span class="pre">:abstractmethod:</span></code> to indicate it is an abstract.</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="MyTestPackage.MyTestModule.myTestClass.testStaticMethod">
+<em class="property">static </em><code class="sig-name descname">testStaticMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.testStaticMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.testStaticMethod" title="MyTestPackage.MyTestModule.myTestClass.testStaticMethod"><code class="xref py py-meth docutils literal notranslate"><span class="pre">testStaticMethod()</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MyTestPackage.MyTestModule.myTestClass.testClassMethod">
+<em class="property">classmethod </em><code class="sig-name descname">testClassMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.testClassMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.testClassMethod" title="MyTestPackage.MyTestModule.myTestClass.testClassMethod"><code class="xref py py-meth docutils literal notranslate"><span class="pre">testClassMethod()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction">
+<code class="sig-prename descclassname">&#64;</code><code class="sig-name descname">testDecoratorFunction</code><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction" title="MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction"><code class="xref py py-func docutils literal notranslate"><span class="pre">testDecoratorFunction()</span></code></a>. Decorator functions modify</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="MyTestPackage.MyTestModule.myTestClass.testDecoratorMethod">
+<code class="sig-prename descclassname">&#64;</code><code class="sig-name descname">testDecoratorMethod</code><a class="headerlink" href="#MyTestPackage.MyTestModule.myTestClass.testDecoratorMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of <a class="reference internal" href="#MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction" title="MyTestPackage.MyTestModule.myTestClass.testDecoratorFunction"><code class="xref py py-meth docutils literal notranslate"><span class="pre">testDecoratorFunction()</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="extensions">
+<h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span> <span class="pre">-o</span> <span class="pre">.</span> <span class="pre">.</span></code> creates apidoc rst files that pull the api descriptions from the docstrings of the code.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">contents</span><span class="p">::</span> Table of Contents
+
+<span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> test
+       <span class="nc">:members:</span>
+       <span class="nc">:private-members:</span>
+       <span class="nc">:special-members:</span>
+</pre></div>
+</div>
+<p>Modules must be able to be imported using the path inside <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>. The new auto directives module, class and exception just output the docstring.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">autoexception</span><span class="p">::</span> name
+</pre></div>
+</div>
+<p>If the option <code class="docutils literal notranslate"><span class="pre">:members:</span></code> is left empty they generate all members of the class, but you can also target members by a comma separated name list.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> name
+   <span class="nc">:members:</span> <span class="nf">fooOne, fooTwo</span>
+</pre></div>
+</div>
+<p>Members without docstrings will be left out unless the option <code class="docutils literal notranslate"><span class="pre">:undoc-members:</span></code> is used. Also private members are left out unless <code class="docutils literal notranslate"><span class="pre">:private-members:</span></code> option is given. Inherited members are left out unless the <code class="docutils literal notranslate"><span class="pre">:members:</span></code> option is empty and the <code class="docutils literal notranslate"><span class="pre">:inherited-members:</span></code> option is used. The <code class="docutils literal notranslate"><span class="pre">:show-inheritance:</span></code> option inserts a list of inheritance below the class signature. Note that <code class="docutils literal notranslate"><span class="pre">automodule</span></code> can use the synopsis, platform and deprecated options in the same way as <code class="docutils literal notranslate"><span class="pre">module</span></code>. If all but some members are to be documented you can use the empty <code class="docutils literal notranslate"><span class="pre">members</span></code> option and then target the exceptions with the <code class="docutils literal notranslate"><span class="pre">:exclude-members:</span></code>. Content auto directives are:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autofunction</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">autodecorator</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">autodata</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">automethod</span><span class="p">::</span> name
+<span class="p">..</span> <span class="ow">autoattribute</span><span class="p">::</span> name
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">autodata</span></code> and <code class="docutils literal notranslate"><span class="pre">autoattribute</span></code> support the use of the <code class="docutils literal notranslate"><span class="pre">:annotation:</span></code> option that overwrites the value shown for the variable. You can add additional comments for every data and attribute by adding <code class="docutils literal notranslate"><span class="pre">#:</span> <span class="pre">comment</span></code> before or on the variable line.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">autosectionlabel</span></code> extension creates labels for every section title of the documentation.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="gh">A Plain Title</span>
+<span class="gh">-------------</span>
+
+Reference to the title, see <span class="na">:ref:</span><span class="nv">`A Plain Title`</span>.
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> extension generates a table of functions, methods and attributes.  For example the next code would generate the following summary table:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">autosummary</span><span class="p">::</span>
+
+   Foo
+   Foo.add()
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="test.html#test.Foo" title="test.Foo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Foo</span></code></a>(qux[, spam])</p></td>
+<td><p>Docstring for class Foo.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="test.html#test.Foo.add" title="test.Foo.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Foo.add</span></code></a>(val1, val2)</p></td>
+<td><p>Return the added values.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">doctest</span></code> extension tests snippets in the documentation, by searching for doctests tests. The test snippets are divided into <em>setup code</em> and <em>test code</em>. Test code blocks can be in doctest style (interactive python session) or in code output style (code block and the output). The directives you can use are:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">testsetup</span><span class="p">::</span> [group]
+<span class="p">..</span> <span class="ow">testcleanup</span><span class="p">::</span> [group]
+<span class="p">..</span> <span class="ow">doctest</span><span class="p">::</span> [group]
+<span class="p">..</span> <span class="ow">testcode</span><span class="p">::</span> [group]
+<span class="p">..</span> <span class="ow">testoutput</span><span class="p">::</span> [group]
+</pre></div>
+</div>
+<p>The test can be performed with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build -b doctest . build
+</pre></div>
+</div>
+<p>Or automatically from the make file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="se">\m</span>ake doctest
+</pre></div>
+</div>
+<p>The following test code imports <code class="file docutils literal notranslate"><span class="pre">test.py</span></code> and uses two methods:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">testsetup</span><span class="p">::</span> *
+
+   import test
+   testInstance = test.Foo(&#39;hello&#39;,spam=False)
+
+<span class="p">..</span> <span class="ow">doctest</span><span class="p">::</span>
+
+   &gt;&gt;&gt; testInstance.add(2, 2)
+   4
+
+<span class="p">..</span> <span class="ow">testcode</span><span class="p">::</span>
+
+   r = testInstance.capitalize(&#39;testString&#39;)
+   print(r)
+
+<span class="p">..</span> <span class="ow">testoutput</span><span class="p">::</span>
+
+   TESTSTRING
+
+<span class="p">..</span> <span class="ow">testcleanup</span><span class="p">::</span>
+
+   x = 0
+</pre></div>
+</div>
+<p>For example</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">testInstance</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">testInstance</span><span class="o">.</span><span class="n">capitalize</span><span class="p">(</span><span class="s1">&#39;testString&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>TESTSTRING
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">extlinks</span></code> adds the <code class="docutils literal notranslate"><span class="pre">extlinks</span></code> configuration dictionary where you can add links so that you can alias them and reference them quickly. For example:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>extlinks = {&#39;docs&#39;: (&#39;http://example.org/A/%s/+d/index.html&#39;, &#39;framework docs &#39;)}
+
+Example Link: <span class="na">:docs:</span><span class="nv">`1.0.1`</span>,
+Title Example Link: <span class="na">:docs:</span><span class="nv">`documentation (1.2.3) &lt;1.2.3&gt;`</span>.
+</pre></div>
+</div>
+<p>Example Link: <a class="reference external" href="http://example.org/A/1.0.1/+d/index.html">framework docs 1.0.1</a>,</p>
+<p>Title Example Link: <a class="reference external" href="http://example.org/A/1.2.3/+d/index.html">documentation (1.2.3)</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">graphviz</span></code> extension allows to embed a Graphviz graph, you can use input code or a dot file.</p>
+<div class="figure align-center" id="graph-label">
+<div class="graphviz"><img src="_images/graphviz-bb9216c5a4d3cd2cd09ed4041f61289e930fcd24.png" alt="digraph foo {
+   &quot;bar&quot; -&gt; &quot;baz&quot;;
+}" class="graphviz" /></div>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Graph caption.</span><a class="headerlink" href="#graph-label" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="graph-label-two">
+<div class="graphviz"><img src="_images/graphviz-b9feb54047a27b7f518685ac6215faf7bece3c68.png" alt="graph fuzz {
+   &quot;bar&quot; -- &quot;baz&quot;;
+}" class="graphviz" /></div>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Graph caption.</span><a class="headerlink" href="#graph-label-two" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">imageconverter</span></code> is just the use of the <code class="docutils literal notranslate"><span class="pre">imagemagick</span></code> module to convert images for sphinx when multiple builders are used. The <code class="docutils literal notranslate"><span class="pre">viewcode</span></code> adds links to the complete local source code.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">intersphinx</span></code> extension creates links between projects using the <code class="docutils literal notranslate"><span class="pre">objects.inv</span></code> that is generated for html output. If intersphinx doesnt find a cross reference in the current set it starts searching in the aditional sets configured by the config option <code class="docutils literal notranslate"><span class="pre">intersphinx_mapping</span></code>, this allows something like <a class="reference external" href="https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">zipfile.ZipFile</span></code></a> or <a class="reference external" href="../Example/build/html/Pets.html#Pets.Pets" title="(in Proyect Example Docs)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pets.Pets</span></code></a> to work without having to import the proyect. Another with a reference link would be <a class="reference external" href="../Example/build/html/Pets.html#Pets.Pets" title="(in Proyect Example Docs)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pets</span> <span class="pre">Example</span> <span class="pre">Link</span></code></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">todo</span></code> extension adds directives to add reminders of sections that need to be expanded. We can add todo’s with:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">todo</span><span class="p">::</span>
+
+       Create a todo One.
+
+<span class="p">..</span> <span class="ow">todo</span><span class="p">::</span>
+
+   Create a todo Two.
+
+Todo List:
+
+<span class="p">..</span> <span class="ow">todolist</span><span class="p">::</span>
+</pre></div>
+</div>
+<p>By default todo’s are generated only when <code class="docutils literal notranslate"><span class="pre">todo_include_todos</span></code> config option is set to True. If we want them to emit terminal warnings for every Todo we can set to True the <code class="docutils literal notranslate"><span class="pre">todo_emit_warnings</span></code> config option.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Create a todo One.</p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Create a todo Two.</p>
+</div>
+<p>Todo List:</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Create a todo One.</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#id1"><em>original entry</em></a> is located in C:\Users\DarioA\Documents\Everything\Python\Sphinx\Example 2\api-file.rst, line 291.)</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>Create a todo Two.</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="#id2"><em>original entry</em></a> is located in C:\Users\DarioA\Documents\Everything\Python\Sphinx\Example 2\api-file.rst, line 295.)</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Proyect Example 2</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Sphinx Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Api Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="intro.html" title="previous chapter">Chapter Title</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">Example 2</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Dario Arzaba.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/api-file.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

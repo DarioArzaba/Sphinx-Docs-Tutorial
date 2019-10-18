@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>trianglelib.tests &#8212; trianglelib 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for trianglelib.tests</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">unittest</span> <span class="k">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">trianglelib</span> <span class="k">import</span> <span class="n">shape</span><span class="p">,</span> <span class="n">utils</span>
+
+<div class="viewcode-block" id="TestShape"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape">[docs]</a><span class="k">class</span> <span class="nc">TestShape</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestShape.test_rotations"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_rotations">[docs]</a>    <span class="k">def</span> <span class="nf">test_rotations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">t</span><span class="o">.</span><span class="n">_rotations</span><span class="p">()</span> <span class="o">==</span> <span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestShape.test_eq"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_eq">[docs]</a>    <span class="k">def</span> <span class="nf">test_eq</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">t</span> <span class="o">==</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">t</span> <span class="o">==</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">t</span> <span class="o">==</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestShape.test_is_similar"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_is_similar">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_similar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">t</span><span class="o">.</span><span class="n">is_similar</span><span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="n">t</span><span class="o">.</span><span class="n">is_similar</span><span class="p">(</span><span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestShape.test_is_equilateral"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_is_equilateral">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_equilateral</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TestShape.test_is_isosceles"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_is_isosceles">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_isosceles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TestShape.test_perimeter"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_perimeter">[docs]</a>    <span class="k">def</span> <span class="nf">test_perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span> <span class="o">==</span> <span class="mi">15</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span> <span class="o">==</span> <span class="mi">120</span></div>
+
+<div class="viewcode-block" id="TestShape.test_area"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_area">[docs]</a>    <span class="k">def</span> <span class="nf">test_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">()</span> <span class="o">==</span> <span class="mi">6</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="p">()</span> <span class="o">==</span> <span class="mi">600</span></div>
+
+<div class="viewcode-block" id="TestShape.test_scale"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestShape.test_scale">[docs]</a>    <span class="k">def</span> <span class="nf">test_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="n">shape</span><span class="o">.</span><span class="n">Triangle</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="TestUtils"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils">[docs]</a><span class="k">class</span> <span class="nc">TestUtils</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+
+<div class="viewcode-block" id="TestUtils.test_is_triangle"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils.test_is_triangle">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_triangle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_triangle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_triangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="TestUtils.test_is_equilateral"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils.test_is_equilateral">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_equilateral</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TestUtils.test_is_isosceles"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils.test_is_isosceles">[docs]</a>    <span class="k">def</span> <span class="nf">test_is_isosceles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TestUtils.test_compute_perimeter"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils.test_compute_perimeter">[docs]</a>    <span class="k">def</span> <span class="nf">test_compute_perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_perimeter</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_perimeter</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_perimeter</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">19</span></div>
+
+<div class="viewcode-block" id="TestUtils.test_compute_area"><a class="viewcode-back" href="../../trianglelib.html#trianglelib.tests.TestUtils.test_compute_area">[docs]</a>    <span class="k">def</span> <span class="nf">test_compute_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_area</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_area</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+        <span class="k">assert</span> <span class="n">utils</span><span class="o">.</span><span class="n">compute_area</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="o">==</span> <span class="mi">600</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">trianglelib</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../using-sphinx.html">Notes on Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-rst.html">RST Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../quick-sphinx.html">Sphinx Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-api.html">Writing ‘api.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-tutorial.html">Writing ‘tutorial.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-guide.html">Writing ‘guide.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Example: tutorial.rst — The trianglelib tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide.html">Example: guide.rst — The trianglelib guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">Example: api.rst — The trianglelib API reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Dario Arzaba.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

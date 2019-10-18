@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>trianglelib package &#8212; trianglelib 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="trianglelib-package">
+<h1>trianglelib package<a class="headerlink" href="#trianglelib-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-trianglelib.shape">
+<span id="trianglelib-shape-module"></span><h2>trianglelib.shape module<a class="headerlink" href="#module-trianglelib.shape" title="Permalink to this headline">¶</a></h2>
+<p>Use the triangle class to represent triangles.</p>
+<dl class="class">
+<dt id="trianglelib.shape.Triangle">
+<em class="property">class </em><code class="sig-prename descclassname">trianglelib.shape.</code><code class="sig-name descname">Triangle</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A triangle is a three-sided polygon.</p>
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.area">
+<code class="sig-name descname">area</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the area of this triangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.is_equilateral">
+<code class="sig-name descname">is_equilateral</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether this triangle is equilateral.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.is_isosceles">
+<code class="sig-name descname">is_isosceles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether this triangle is isoceles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.is_similar">
+<code class="sig-name descname">is_similar</code><span class="sig-paren">(</span><em class="sig-param">triangle</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.is_similar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.is_similar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether this triangle is similar to another triangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.perimeter">
+<code class="sig-name descname">perimeter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.perimeter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the perimeter of this triangle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.shape.Triangle.scale">
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/shape.html#Triangle.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.shape.Triangle.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new triangle, <cite>factor</cite> times the size of this one.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-trianglelib.tests">
+<span id="trianglelib-tests-module"></span><h2>trianglelib.tests module<a class="headerlink" href="#module-trianglelib.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="trianglelib.tests.TestShape">
+<em class="property">class </em><code class="sig-prename descclassname">trianglelib.tests.</code><code class="sig-name descname">TestShape</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_area">
+<code class="sig-name descname">test_area</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_eq">
+<code class="sig-name descname">test_eq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_eq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_eq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_is_equilateral">
+<code class="sig-name descname">test_is_equilateral</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_is_isosceles">
+<code class="sig-name descname">test_is_isosceles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_is_similar">
+<code class="sig-name descname">test_is_similar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_is_similar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_is_similar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_perimeter">
+<code class="sig-name descname">test_perimeter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_perimeter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_perimeter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_rotations">
+<code class="sig-name descname">test_rotations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_rotations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_rotations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestShape.test_scale">
+<code class="sig-name descname">test_scale</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestShape.test_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestShape.test_scale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="trianglelib.tests.TestUtils">
+<em class="property">class </em><code class="sig-prename descclassname">trianglelib.tests.</code><code class="sig-name descname">TestUtils</code><span class="sig-paren">(</span><em class="sig-param">methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="method">
+<dt id="trianglelib.tests.TestUtils.test_compute_area">
+<code class="sig-name descname">test_compute_area</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils.test_compute_area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils.test_compute_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestUtils.test_compute_perimeter">
+<code class="sig-name descname">test_compute_perimeter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils.test_compute_perimeter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils.test_compute_perimeter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestUtils.test_is_equilateral">
+<code class="sig-name descname">test_is_equilateral</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils.test_is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils.test_is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestUtils.test_is_isosceles">
+<code class="sig-name descname">test_is_isosceles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils.test_is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils.test_is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="trianglelib.tests.TestUtils.test_is_triangle">
+<code class="sig-name descname">test_is_triangle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/tests.html#TestUtils.test_is_triangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.tests.TestUtils.test_is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-trianglelib.utils">
+<span id="trianglelib-utils-module"></span><h2>trianglelib.utils module<a class="headerlink" href="#module-trianglelib.utils" title="Permalink to this headline">¶</a></h2>
+<p>Routines to test triangle properties without explicit instantiation.</p>
+<dl class="function">
+<dt id="trianglelib.utils.compute_area">
+<code class="sig-prename descclassname">trianglelib.utils.</code><code class="sig-name descname">compute_area</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/utils.html#compute_area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.utils.compute_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the area of the triangle with side lengths <cite>a</cite>, <cite>b</cite>, and <cite>c</cite>.</p>
+<p>If the three lengths provided cannot be the sides of a triangle,
+then the area 0 is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trianglelib.utils.compute_perimeter">
+<code class="sig-prename descclassname">trianglelib.utils.</code><code class="sig-name descname">compute_perimeter</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/utils.html#compute_perimeter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.utils.compute_perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the perimeer of the triangle with side lengths <cite>a</cite>, <cite>b</cite>, and <cite>c</cite>.</p>
+<p>If the three lengths provided cannot be the sides of a triangle,
+then the perimeter 0 is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trianglelib.utils.is_equilateral">
+<code class="sig-prename descclassname">trianglelib.utils.</code><code class="sig-name descname">is_equilateral</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/utils.html#is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.utils.is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether lengths <cite>a</cite>, <cite>b</cite>, and <cite>c</cite> are an equilateral triangle.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trianglelib.utils.is_isosceles">
+<code class="sig-prename descclassname">trianglelib.utils.</code><code class="sig-name descname">is_isosceles</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/utils.html#is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.utils.is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether lengths <cite>a</cite>, <cite>b</cite>, and <cite>c</cite> are an isosceles triangle.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="trianglelib.utils.is_triangle">
+<code class="sig-prename descclassname">trianglelib.utils.</code><code class="sig-name descname">is_triangle</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/trianglelib/utils.html#is_triangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#trianglelib.utils.is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether lengths <cite>a</cite>, <cite>b</cite>, <cite>c</cite> can be the sides of a triangle.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-trianglelib">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-trianglelib" title="Permalink to this headline">¶</a></h2>
+<p>Routines for working with triangles.</p>
+<p>The two modules inside of this package are packed with useful features
+for the programmer who needs to support triangles:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">shape</span></code></dt><dd><p>This module provides a full-fledged <cite>Triangle</cite> object that can be
+instantiated and then asked to provide all sorts of information
+about its properties.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">utils</span></code></dt><dd><p>For the programmer in a hurry, this module offers quick functions
+that take as arguments the three side lengths of a triangle, and
+perform a quick computation without the programmer having to make
+the extra step of creating an object.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">trianglelib</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using-sphinx.html">Notes on Using Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-rst.html">RST Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-sphinx.html">Sphinx Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing-api.html">Writing ‘api.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing-tutorial.html">Writing ‘tutorial.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing-guide.html">Writing ‘guide.rst’</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Example: tutorial.rst — The trianglelib tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Example: guide.rst — The trianglelib guide</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Dario Arzaba.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/trianglelib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
