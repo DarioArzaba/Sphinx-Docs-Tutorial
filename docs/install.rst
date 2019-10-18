@@ -133,21 +133,18 @@ Interactive tool to generate the docs directory and a makefile to automate the h
 -h, --help                     Shows included help. 
 --version                      Shows sphinx's version. 
 --sep                          Separates the source and build directory. 
--p PROYECT-NAME                Defines the proyect name. 
--a PROYECT-AUTHOR              Defines the proyect author name. 
--v PROYECT-VERSION             Defines the proyect version number. 
--r PROYECT-RELEASE             Defines the proyect release number.
--l LANGUAGE-CODE               Defines the language code of the docs.
---suffix=SUFFIX                Defines the source extension, by default rst.
---master=MASTER                Defines the master document, by default index.
+-p NAME                        Defines the proyect name. 
+-a AUTHOR                      Defines the proyect author name. 
+-v VERSION                     Defines the proyect version number. 
+-r RELEASE                     Defines the proyect release number.
+-l LANG                        Defines the language code of the docs.
+--suffix=s                     Defines the source extension, by default rst.
+--master=m                     Defines the master document, by default index.
 --ext-autodoc                  Activates autodoc 
 --ext-doctest                  Activates doctest 
---ext-intersphinx              Activates intersphinx 
 --ext-todo                     Activates todo 
 --ext-mathjax                  Activates mathjax 
 --ext-viewcode                 Activates viewcode 
---makefile, --no-makefile      Creates or not the makefile file.
---batchfile, --no-batchfile    Creates or not the batchfile file.
 
 The option ``--templatedir=TEMPLATEDIR`` establishes a directory with jinja2 files that work as a template to modify the generated files. To work Sphinx needs the following files: master_doc.rst_t, conf.py_t, Makefile_t, Makefile.new_t, make.bat_t and make.bat.new_t. Sphinx default template is in :file:`/sphinx/templates/quickstart/`.
 
