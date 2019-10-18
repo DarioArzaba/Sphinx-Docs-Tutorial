@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Install Sphinx &#8212; Proyect Example 2 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter Title" href="intro.html" />
+    <link rel="prev" title="Welcome to Proyect Example 2’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Chapter Title"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Proyect Example 2’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Proyect Example 2 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="install-sphinx">
+<h1>Install Sphinx<a class="headerlink" href="#install-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Sphinx is a static site generator for Python documentation created by Georg Brandl. We start by installing Sphinx and optionally a theme.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphynx
+pip install sphinx-rtd-theme
+</pre></div>
+</div>
+<p>To start Sphinx we locate our root directory and create a docs directory, inside we use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
+<p>And continue with the instructions presented, creating different source and build folders. The folder structure is:</p>
+<div class="line-block">
+<div class="line">Example(Proyect)</div>
+<div class="line">├── docs</div>
+<div class="line">│   ├── build</div>
+<div class="line">│   ├── make.bat</div>
+<div class="line">│   ├── Makefile</div>
+<div class="line">│   └── source</div>
+<div class="line">│       ├── index.rst</div>
+<div class="line">│       ├── conf.py</div>
+<div class="line">│       ├── _static</div>
+<div class="line-block">
+<div class="line">└── _templates</div>
+</div>
+<div class="line">└── Example(Package)</div>
+<div class="line-block">
+<div class="line">├── __init__.py</div>
+<div class="line">└── exampleSource.py</div>
+</div>
+</div>
+<p>We modify <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> to use the RTS theme and the autodocs extension.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../../Example&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+<span class="p">]</span>
+
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Default Themes: alabaster, classic, sphinxdoc, scrolls, agogo, traditional, nature, haiku, pyramid, bizstyle</p></li>
+</ul>
+<p>We can autogenerate the rst files from docstrings using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-apidoc -o . ../../Example
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Example(Proyect)</div>
+<div class="line">├── docs</div>
+<div class="line">│   ├── build</div>
+<div class="line">│   ├── make.bat</div>
+<div class="line">│   ├── Makefile</div>
+<div class="line">│   └── source</div>
+<div class="line">│       ├── index.rst</div>
+<div class="line">│       ├── conf.py</div>
+<div class="line">│       ├── _static</div>
+<div class="line">│       ├── _templates</div>
+<div class="line-block">
+<div class="line">└── exampleSource.rst</div>
+</div>
+<div class="line">└── Example(Package)</div>
+<div class="line-block">
+<div class="line">├── __init__.py</div>
+<div class="line">└── exampleSource.py</div>
+</div>
+</div>
+<p>With every rst generated or created we can output our documentation in html or other format using the build command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build -b html . ../build
+</pre></div>
+</div>
+<p>To automate the html generation we can use the Makefile that was created, making sure to assign the <code class="docutils literal notranslate"><span class="pre">sourcedir</span></code>. And then we can use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="se">\m</span>ake clean
+.<span class="se">\m</span>ake html
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">modules.rst</span></code> can generate a warning if it is not in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> toctree. If we dont want it we simply add the option <code class="docutils literal notranslate"><span class="pre">:orphan:</span></code> at the start of the file. The <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code> command generates a file that checks every link in the documentation.</p>
+<p>Also if we want markdown compatibility we need to modify <code class="docutils literal notranslate"><span class="pre">config.py</span></code> with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">recommonmark.Parser</span>
+<span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;.md&#39;</span> <span class="p">:</span> <span class="s1">&#39;recommonmark.parser.CommonMarkParser&#39;</span> <span class="p">}</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.rst&#39;</span><span class="p">,</span><span class="s1">&#39;.md&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For Jupyter Notebooks compatibility we need to install the <code class="docutils literal notranslate"><span class="pre">nbsphinx</span></code> extension and add it.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;nbsphinx&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.rst&#39;</span><span class="p">,</span><span class="s1">&#39;.md&#39;</span><span class="p">,</span> <span class="s1">&#39;.ipynb&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Another alternative would be to use the format converter
+<a class="reference external" href="https://pandoc.org/try/">Pandoc</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc example.md -f markdown -t rst -o example.rst
+</pre></div>
+</div>
+<p>Finally to generate a PDF we can use the <a class="reference external" href="https://github.com/brechtm/rinohtype">Rinohtype</a> python module.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install rinohtype
+sphinx-build -b rinoh ../../Example ../build/rinoh
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>LIVE reTex markdown: [Live Testing](<a class="reference external" href="https://livesphinx.herokuapp.com/">https://livesphinx.herokuapp.com/</a>)</p></li>
+</ul>
+<div class="section" id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart <span class="o">[</span>options<span class="o">]</span>
+</pre></div>
+</div>
+<p>Interactive tool to generate the docs directory and a makefile to automate the html generation. Options:</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-q</span>, <span class="option">--quiet</span></kbd></dt>
+<dd><p>Needs -p, -a y -v. Skips other options.</p>
+</dd>
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>Shows included help.</p>
+</dd>
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>Shows sphinx’s version.</p>
+</dd>
+<dt><kbd><span class="option">--sep</span></kbd></dt>
+<dd><p>Separates the source and build directory.</p>
+</dd>
+<dt><kbd><span class="option">-p <var>PROYECT-NAME</var></span></kbd></dt>
+<dd><p>Defines the proyect name.</p>
+</dd>
+<dt><kbd><span class="option">-a <var>PROYECT-AUTHOR</var></span></kbd></dt>
+<dd><p>Defines the proyect author name.</p>
+</dd>
+<dt><kbd><span class="option">-v <var>PROYECT-VERSION</var></span></kbd></dt>
+<dd><p>Defines the proyect version number.</p>
+</dd>
+<dt><kbd><span class="option">-r <var>PROYECT-RELEASE</var></span></kbd></dt>
+<dd><p>Defines the proyect release number.</p>
+</dd>
+<dt><kbd><span class="option">-l <var>LANGUAGE-CODE</var></span></kbd></dt>
+<dd><p>Defines the language code of the docs.</p>
+</dd>
+<dt><kbd><span class="option">--suffix=<var>SUFFIX</var></span></kbd></dt>
+<dd><p>Defines the source extension, by default rst.</p>
+</dd>
+<dt><kbd><span class="option">--master=<var>MASTER</var></span></kbd></dt>
+<dd><p>Defines the master document, by default index.</p>
+</dd>
+<dt><kbd><span class="option">--ext-autodoc</span></kbd></dt>
+<dd><p>Activates autodoc</p>
+</dd>
+<dt><kbd><span class="option">--ext-doctest</span></kbd></dt>
+<dd><p>Activates doctest</p>
+</dd>
+<dt><kbd><span class="option">--ext-intersphinx</span></kbd></dt>
+<dd><p>Activates intersphinx</p>
+</dd>
+<dt><kbd><span class="option">--ext-todo</span></kbd></dt>
+<dd><p>Activates todo</p>
+</dd>
+<dt><kbd><span class="option">--ext-mathjax</span></kbd></dt>
+<dd><p>Activates mathjax</p>
+</dd>
+<dt><kbd><span class="option">--ext-viewcode</span></kbd></dt>
+<dd><p>Activates viewcode</p>
+</dd>
+<dt><kbd><span class="option">--makefile</span>, <span class="option">--no-makefile</span></kbd></dt>
+<dd><p>Creates or not the makefile file.</p>
+</dd>
+<dt><kbd><span class="option">--batchfile</span>, <span class="option">--no-batchfile</span></kbd></dt>
+<dd><p>Creates or not the batchfile file.</p>
+</dd>
+</dl>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--templatedir=TEMPLATEDIR</span></code> establishes a directory with jinja2 files that work as a template to modify the generated files. To work Sphinx needs the following files: master_doc.rst_t, conf.py_t, Makefile_t, Makefile.new_t, make.bat_t and make.bat.new_t. Sphinx default template is in <code class="file docutils literal notranslate"><span class="pre">/sphinx/templates/quickstart/</span></code>.</p>
+</div>
+<div class="section" id="build">
+<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build <span class="o">[</span>options<span class="o">]</span> &lt;sourcedir&gt; &lt;outputdir&gt; <span class="o">[</span>filenames …<span class="o">]</span>
+</pre></div>
+</div>
+<p>This tool generates documentation from the files in the source directory and puts them in the build directory, by default it generates HTML but another builder can be specified. By default it only generates the documents that have been modified, or specified files by their filename.</p>
+<ul class="simple">
+<li><p>Default Builders: html, dirhtml, singlehtml, htmlhelp, qthelp, devhelp, epub, applehelp, latex, man, texinfo, text, gettext, doctest, linkcheck, xml, pseudoxml, dummy (No ouput), changes (changelog), json, pickle.</p></li>
+</ul>
+<dl class="option-list">
+<dt><kbd><span class="option">-b <var>BUILDER</var></span></kbd></dt>
+<dd><p>Selects a builder.</p>
+</dd>
+<dt><kbd><span class="option">-a</span></kbd></dt>
+<dd><p>Generates every file, not only the modified files.</p>
+</dd>
+<dt><kbd><span class="option">-E</span></kbd></dt>
+<dd><p>Generate the document structure again.</p>
+</dd>
+<dt><kbd><span class="option">-j <var>N</var></span></kbd></dt>
+<dd><p>Generate with N number of CPUs parallel (experimental).</p>
+</dd>
+<dt><kbd><span class="option">-n</span></kbd></dt>
+<dd><p>Execute in nit-picky mode, warnings for every reference.</p>
+</dd>
+<dt><kbd><span class="option">-N</span></kbd></dt>
+<dd><p>Dont show output with color in the terminal.</p>
+</dd>
+<dt><kbd><span class="option">-T</span></kbd></dt>
+<dd><p>Shows the python traceback from an error.</p>
+</dd>
+<dt><kbd><span class="option">-v</span></kbd></dt>
+<dd><p>Generate docs with loglevel, can be added multiple times.</p>
+</dd>
+<dt><kbd><span class="option">-q</span></kbd></dt>
+<dd><p>Dont print to stdout, warnings and errors to stderr.</p>
+</dd>
+<dt><kbd><span class="option">-Q</span></kbd></dt>
+<dd><p>Dont print to stdout, errors to stderr.</p>
+</dd>
+<dt><kbd><span class="option">-W</span></kbd></dt>
+<dd><p>Print warnings as errors, stops at first warning.</p>
+</dd>
+</dl>
+<p>With the option <cite>-d PATH</cite> we define the directory where the intermediate files are generated before generating the final output. This files are saved by default in the form of a cache called doctree pickles, normally the same pickles are used for different builders.</p>
+<p>The makefile uses this enviroment variables:</p>
+<ul class="simple">
+<li><p>MAKE: Defines the path to the make command, can be executed from make.bat file.</p></li>
+<li><p>PAPER: Default paper dimensions for the latex builder, like <em>a4</em> or <em>letter</em>.</p></li>
+<li><p>SPHINXBUILD: Command to overwrite the sphinx-build.</p></li>
+<li><p>BUILDDIR: Output directory by default.</p></li>
+<li><p>SPHINXOPTS: Aditional options.</p></li>
+</ul>
+</div>
+<div class="section" id="apidoc">
+<h2>Apidoc<a class="headerlink" href="#apidoc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-apidoc <span class="o">[</span>OPTIONS<span class="o">]</span> -o &lt;OUTPUT_PATH&gt; &lt;MODULE_PATH&gt; <span class="o">[</span>EXCLUDE_PATTERN,<span class="o">]</span>
+</pre></div>
+</div>
+<p>Tool to generate automatically rst using the autodoc extension in API format, we recommend to protect the loose code inside scripts with a <code class="docutils literal notranslate"><span class="pre">if__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> routine.</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-o <var>OUTPUT-PATH</var></span></kbd></dt>
+<dd><p>Ouput directory, if there is none it is created.</p>
+</dd>
+<dt><kbd><span class="option">-f</span></kbd></dt>
+<dd><p>Forces the overwriting of any file generated before.</p>
+</dd>
+<dt><kbd><span class="option">-l</span></kbd></dt>
+<dd><p>Follow simbolic links.</p>
+</dd>
+<dt><kbd><span class="option">-n</span></kbd></dt>
+<dd><p>Don’t generate any file.</p>
+</dd>
+<dt><kbd><span class="option">-s <var>SUFFIX</var></span></kbd></dt>
+<dd><p>Define the file extension of the generated files.</p>
+</dd>
+<dt><kbd><span class="option">-d <var>MAXDEPTH</var></span></kbd></dt>
+<dd><p>Define a maxdepth for the generated toctree’s.</p>
+</dd>
+<dt><kbd><span class="option">-M</span></kbd></dt>
+<dd><p>Put the docs of the modules before the docs of the submodules.</p>
+</dd>
+<dt><kbd><span class="option">-T</span></kbd></dt>
+<dd><p>Don’t create a toctree file.</p>
+</dd>
+<dt><kbd><span class="option">-F</span></kbd></dt>
+<dd><p>Try to execute with quickstart.</p>
+</dd>
+<dt><kbd><span class="option">-e</span></kbd></dt>
+<dd><p>Put a page in the module documentation.</p>
+</dd>
+<dt><kbd><span class="option">-E</span></kbd></dt>
+<dd><p>Ignore module titles, useful if docstrings already include them.</p>
+</dd>
+<dt><kbd><span class="option">-P</span></kbd></dt>
+<dd><p>Don’t include private modules.</p>
+</dd>
+</dl>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--templatedir=TEMPLATEDIR</span></code> establishes a directory with jinja2 files that work as a template to modify the generation of files. The files needed master_doc.rst_t, conf.py_t, Makefile_t, Makefile.new_t, make.bat_t, make.bat.new_t, module.rst_t, package.rst_t and toc.rst_t. Sphinx default template is in <code class="file docutils literal notranslate"><span class="pre">/sphinx/templates/apidoc/</span></code> and in <code class="file docutils literal notranslate"><span class="pre">/sphinx/templates/quickstart</span></code>.</p>
+</div>
+<div class="section" id="toc-trees">
+<h2>Toc Trees<a class="headerlink" href="#toc-trees" title="Permalink to this headline">¶</a></h2>
+<p>The table of contents is created with this directive, every file subtoctree is also added automatically, the <code class="docutils literal notranslate"><span class="pre">maxdepth</span></code> option limits the nested subtoctree’s, documents paths must be relative to the toctree file. Sphinx automatically takes the main titles from the imported files to create the links, To specify a custom title we use the roles syntax and the <code class="docutils literal notranslate"><span class="pre">titlesonly</span></code> option takes just the first title of the file. To group titles based on some expresion we use the <code class="docutils literal notranslate"><span class="pre">glob</span></code> option.</p>
+<p>For example it groups in alphabetical order, starting with the titles that start with intro, then the group of titles that are inside the recipe folder and then it appends the rest of the titles.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:glob:</span>
+
+   intro*
+   recipe/*
+   *
+</pre></div>
+</div>
+<p>The special directive <code class="docutils literal notranslate"><span class="pre">self</span></code> references the current document and is useful if we are planning on creating a <em>sitemap</em> using a toctree. The <code class="docutils literal notranslate"><span class="pre">reversed</span></code> option inverts the order of the toctree or the glob groups. And finally a toctree can be numbered using the <code class="docutils literal notranslate"><span class="pre">numbered</span></code> option.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Install Sphinx</a><ul>
+<li><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li><a class="reference internal" href="#build">Build</a></li>
+<li><a class="reference internal" href="#apidoc">Apidoc</a></li>
+<li><a class="reference internal" href="#toc-trees">Toc Trees</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Proyect Example 2’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">Chapter Title</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="Chapter Title"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Proyect Example 2’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Proyect Example 2 1.0.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Dario Arzaba.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+  </body>
+</html>

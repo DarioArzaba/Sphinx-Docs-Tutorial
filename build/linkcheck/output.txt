@@ -1,0 +1,6 @@
+api-file.rst:271: [local] ../Example/build/html/Pets.html#Pets.Pets
+api-file.rst:271: [local] ../Example/build/html/Pets.html#Pets.Pets
+api-file.rst:245: [broken] http://example.org/A/1.0.1/+d/index.html: 404 Client Error: Not Found for url: http://example.org/A/1.0.1/+d/index.html
+api-file.rst:247: [broken] http://example.org/A/1.2.3/+d/index.html: 404 Client Error: Not Found for url: http://example.org/A/1.2.3/+d/index.html
+intro.rst:164: [local] SectionHeadingReference_
+intro.rst:152: [local] SectionHeadingReference_
