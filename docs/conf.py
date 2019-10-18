@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
+#sys.path.insert(0, os.path.abspath('.'))
 
 # import sphinx_rtd_theme
 
@@ -27,7 +27,7 @@ source_suffix = {
     '.rst': 'restructuredtext',
 }
 html_static_path = ['_static']
-html_theme = 'alabaster'
+html_theme = 'default'
 numfig=True
 todo_include_todos=True
 manpages_url = "https://manpages.ubuntu.com/manpages/cosmic/en/man1/{path}"
