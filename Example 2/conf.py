@@ -35,7 +35,7 @@ extlinks = {'docs': ('http://example.org/A/%s/+d/index.html', 'framework docs ')
 intersphinx_mapping = {'python': ('https://docs.python.org/3', None), 
 'pets':('../Example/build/html/',None)}
 primary_domain = 'py'
-
+master_doc = 'index'
 # extensions = [
 #  'sphinx_rtd_theme',
 # ]
