@@ -26,7 +26,7 @@ By going over the [Sphinx Docs](https://www.sphinx-doc.org/en/master/) in an att
 	cd Sphinx-Docs-Tutorial
 	```
 
-You can then fallowe the steps provided in the [tutorial](https://sphinx-docs-tutorial.readthedocs.io/en/latest/install.html) or simply adapt the documents in the `docs` folder (rst and config files) and then regenerate the final html files using `sphinx-build` (populating the `html` folder).
+You can then follow the steps provided in the [tutorial](https://sphinx-docs-tutorial.readthedocs.io/en/latest/install.html) or simply adapt the documents in the `docs` folder (rst and config files) and then regenerate the final html files using `sphinx-build` (populating the `html` folder).
 
 ## Usage
 
