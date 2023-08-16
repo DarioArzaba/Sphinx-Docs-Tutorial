@@ -6,3 +6,4 @@ sphinx==2
 sphinx-rtd-theme==0.5
 readthedocs-sphinx-ext==2.2.2
 jinja2==2.11.3
+markupsafe==2.0.1
